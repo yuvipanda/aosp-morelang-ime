@@ -136,7 +136,7 @@ abstract public class ExpandableBinaryDictionary extends Dictionary {
     }
 
     protected static String getFilenameWithLocale(final String name, final String localeStr) {
-        return name + "." + localeStr + ".dict";
+        return name + "." + localeStr + ".mp3";
     }
 
     /**
