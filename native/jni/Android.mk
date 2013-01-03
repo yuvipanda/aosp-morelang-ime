@@ -27,7 +27,7 @@ LATIN_IME_SRC_DIR := src
 
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/$(LATIN_IME_SRC_DIR)
 
-LOCAL_CFLAGS += -Werror -Wall
+LOCAL_CFLAGS += -Wall
 
 # To suppress compiler warnings for unused variables/functions used for debug features etc.
 LOCAL_CFLAGS += -Wno-unused-parameter -Wno-unused-function
