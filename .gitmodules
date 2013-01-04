@@ -1,3 +1,6 @@
 [submodule "inputmethodcommon"]
 	path = inputmethodcommon
 	url = https://android.googlesource.com/platform/frameworks/opt/inputmethodcommon
+[submodule "dictionaries"]
+	path = dictionaries
+	url = https://github.com/yuvipanda/aosp-morelang-ime-dictionaries
