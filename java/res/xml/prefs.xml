@@ -41,10 +41,12 @@
             android:title="@string/popup_on_keypress"
             android:persistent="true"
             android:defaultValue="@bool/config_default_popup_preview" />
-        <EditTextPreference
+        <ListPreference 
             android:key="input_transliteration_method"
             android:title="Transliteration Method"
             android:persistent="true"
+            android:entryValues="@array/transliterate_inputmethod_values"
+            android:entries="@array/transliterate_inputmethod_names"
             android:defaultValue=""/>
         <ListPreference
             android:key="voice_mode"
