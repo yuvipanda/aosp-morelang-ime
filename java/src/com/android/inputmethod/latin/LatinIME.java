@@ -53,6 +53,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.view.ViewParent;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.BaseInputConnection;
 import android.view.inputmethod.CompletionInfo;
 import android.view.inputmethod.CorrectionInfo;
 import android.view.inputmethod.EditorInfo;
@@ -75,9 +76,15 @@ import com.android.inputmethod.latin.define.ProductionFlag;
 import com.android.inputmethod.latin.suggestions.SuggestionsView;
 
 import java.io.FileDescriptor;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Locale;
+
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.wikimedia.morelangs.InputMethod;
+import org.xml.sax.SAXException;
 
 /**
  * Input method implementation for Qwerty'ish keyboard.
@@ -447,8 +454,23 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
         newDictFilter.addAction(
                 DictionaryPackInstallBroadcastReceiver.NEW_DICTIONARY_INTENT_ACTION);
         registerReceiver(mDictionaryPackInstallReceiver, newDictFilter);
+        
+        setupTransliteration();
     }
 
+    void setupTransliteration() {
+        InputMethod im;
+        Log.d("MEMEME", mSettingsValues.mTransliterationMethodName + " Method");
+        try {
+            if(!mSettingsValues.mTransliterationMethodName.equals("")) {
+                im = InputMethod.fromName(mSettingsValues.mTransliterationMethodName);
+                mWordComposer.setTransliterationMethod(im);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+    }
     // Has to be package-visible for unit tests
     /* package */ void loadSettings() {
         // Note that the calling sequence of onCreate() and onCurrentInputMethodSubtypeChanged()
@@ -711,6 +733,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
         loadSettings();
         updateCorrectionMode();
         updateSuggestionVisibility(mResources);
+        setupTransliteration();
 
         if (mSuggest != null && mSettingsValues.mAutoCorrectEnabled) {
             mSuggest.setAutoCorrectionThreshold(mSettingsValues.mAutoCorrectionThreshold);
@@ -2311,6 +2334,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
         initSuggest();
         updateCorrectionMode();
         loadSettings();
+        setupTransliteration();
         // Since we just changed languages, we should re-evaluate suggestions with whatever word
         // we are currently composing. If we are not composing anything, we may want to display
         // predictions or punctuation signs (which is done by updateBigramPredictions anyway).

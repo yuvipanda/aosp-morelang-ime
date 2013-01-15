@@ -78,6 +78,7 @@ public class Settings extends InputMethodSettingsFragment
             "pref_keypress_sound_volume";
 
     public static final String PREF_INPUT_LANGUAGE = "input_language";
+    public static final String PREF_INPUT_TRANSLITERATION_METHOD = "input_transliteration_method";
     public static final String PREF_SELECTED_LANGUAGES = "selected_languages";
     public static final String PREF_DEBUG_SETTINGS = "debug_settings";
 

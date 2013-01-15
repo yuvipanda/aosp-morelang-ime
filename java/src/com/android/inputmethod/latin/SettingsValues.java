@@ -73,6 +73,7 @@ public class SettingsValues {
     @SuppressWarnings("unused") // TODO: Use this
     private final float mKeypressSoundVolumeRawValue;
     private final InputMethodSubtype[] mAdditionalSubtypes;
+    public final String mTransliterationMethodName;
 
     // Deduced settings
     public final int mKeypressVibrationDuration;
@@ -135,6 +136,7 @@ public class SettingsValues {
                 && isBigramSuggestionEnabled(prefs, res, mAutoCorrectEnabled);
         mBigramPredictionEnabled = mBigramSuggestionEnabled
                 && isBigramPredictionEnabled(prefs, res);
+        mTransliterationMethodName = prefs.getString(Settings.PREF_INPUT_TRANSLITERATION_METHOD, "");
         // TODO: remove mEnableSuggestionSpanInsertion. It's always true.
         mEnableSuggestionSpanInsertion = true;
         mVibrationDurationSettingsRawValue =
