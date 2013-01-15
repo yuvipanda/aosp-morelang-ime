@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<resources>
+  <string-array name="transliterate_inputmethod_names">
+    <item>адыгэбзэ - Cyrillic Palochka</item>
+    <item>अहिराणी - अक्षरांतरण</item>
+    <item>अहिराणी - मराठी लिपी</item>
+    <item>አማርኛ - Amharic Transliteration</item>
+    <item>অসমীয়া - প্ৰতিৰূপান্তৰণ</item>
+    <item>অসমীয়া - অভ্ৰ</item>
+    <item>অসমীয়া - বৰ্ণনা</item>
+    <item>অসমীয়া - ইন্‌স্ক্ৰিপ্ত</item>
+    <item>авар - Cyrillic Palochka</item>
+    <item>беларуская - Belarusian Transliteration</item>
+    <item>беларуская - Belarusian Łacinka</item>
+    <item>беларуская (тарашкевіца) - Belarusian Transliteration</item>
+    <item>беларуская (тарашкевіца) - Belarusian Łacinka</item>
+    <item>ⵜⵉⴼⵉⵏⴰⵖ - Tifinagh Transliteration</item>
+    <item>বাংলা - অভ্র</item>
+    <item>বাংলা - ইন্সক্রিপ্ট</item>
+    <item>বাংলা - National Keyboard</item>
+    <item>বাংলা - Bengali Probhat</item>
+    <item>बोड़ो - Bodo Inscript</item>
+    <item>нохчийн - Cyrillic Palochka</item>
+    <item>Dansk - Dansk</item>
+    <item>Deutsch - Deutsch</item>
+    <item>English - International Phonetic Alphabet - SIL</item>
+    <item>Esperanto - Esperanto Transliteration</item>
+    <item>Føroyskt - Føroyskt</item>
+    <item>Suomi - translitterointi</item>
+    <item>कोंकणी - लिप्यंतरण</item>
+    <item>कोंकणी - इनस्क्रिप्ट</item>
+    <item>ગુજરાતી - લિપ્યાંતરણ</item>
+    <item>ગુજરાતી - ઇનસ્ક્રિપ્ટ</item>
+    <item>עברית - Hebrew 2012</item>
+    <item>עברית - Hebrew 2012 (from English)</item>
+    <item>हिन्दी - लिप्यंतरण</item>
+    <item>हिन्दी - इनस्क्रिप्ट</item>
+    <item>हिन्दी - बोलनागरी</item>
+    <item>छत्तीसगढ़ी - लिप्यंतरण</item>
+    <item>Íslenska - Íslenska</item>
+    <item>International Phonetic Alphabet - International Phonetic Alphabet - SIL</item>
+    <item>ꦧꦱꦗꦮ - Javanese</item>
+    <item>ქართული ენა - ტრანსლიტერაცია</item>
+    <item>адыгэбзэ (къэбэрдеибзэ) - Cyrillic Palochka</item>
+    <item>ಕನ್ನಡ - ಲಿಪ್ಯಂತರಣ</item>
+    <item>ಕನ್ನಡ - ಇನ್‌ಸ್ಕ್ರಿಪ್ಟ್</item>
+    <item>ಕನ್ನಡ - ಕಗಪ/ನುಡಿ</item>
+    <item>कोंकणी - कोंकणी इनस्क्रिप्ट २</item>
+    <item>лакку - Cyrillic Palochka</item>
+    <item>лезги - Cyrillic Palochka</item>
+    <item>मैथिली - इनस्क्रिप्ट</item>
+    <item>മലയാളം - ലിപ്യന്തരണം</item>
+    <item>മലയാളം - ഇൻസ്ക്രിപ്റ്റ്</item>
+    <item>Монгол - Mongolian Cyrillic</item>
+    <item>मराठी - अक्षरांतरण</item>
+    <item>मराठी - मराठी इनस्क्रिप्ट २</item>
+    <item>मराठी - मराठी लिपी</item>
+    <item>नेपाली - लिप्यंतरण</item>
+    <item>नेपाली - नेपाळी इनस्क्रिप्ट २</item>
+    <item>नेपाली - इनस्क्रिप्ट</item>
+    <item>नेपाल भाषा - लिप्यंतरण</item>
+    <item>नेपाल भाषा - इनस्क्रिप्ट</item>
+    <item>Norsk - Norsk</item>
+    <item>Norsk - Norsk</item>
+    <item>Norsk (bokmål) - Norsk</item>
+    <item>Norsk (bokmål) - Norsk</item>
+    <item>Norsk (nynorsk) - Norsk</item>
+    <item>Norsk (nynorsk) - Norsk</item>
+    <item>ଓଡ଼ିଆ - Odiya Transliteration</item>
+    <item>ଓଡ଼ିଆ - Odia Lekhani</item>
+    <item>ଓଡ଼ିଆ - Odiya InScript</item>
+    <item>ਪੰਜਾਬੀ - Punjabi Transliteration</item>
+    <item>ਪੰਜਾਬੀ - Punjabi InScript</item>
+    <item>ਪੰਜਾਬੀ - Punjabi Phonetic</item>
+    <item>ⵜⵉⴼⵉⵏⴰⵖ - Tifinagh Transliteration</item>
+    <item>русский - Русский - ЙЦУКЕН</item>
+    <item>саха тыла - Sakha Transliteration</item>
+    <item>संस्कृत - Sanskrit Transliteration</item>
+    <item>संस्कृत - संस्कृत इनस्क्रिप्ट २</item>
+    <item>संस्कृत - Sanskrit InScript</item>
+    <item>Davvisámegiella - Davvisámegiella</item>
+    <item>ⵜⵉⴼⵉⵏⴰⵖ - Tifinagh Transliteration</item>
+    <item>සිංහල - Sinhalese Singlish</item>
+    <item>සිංහල - Sinhalese Wijesekara</item>
+    <item>Svenska - Svenska</item>
+    <item>தமிழ் - எழுத்துப்பெயர்ப்பு</item>
+    <item>தமிழ் - தமிழ்99</item>
+    <item>தமிழ் - இன்ஸ்கிரிப்ட்</item>
+    <item>தமிழ் - பாமினி</item>
+    <item>ತುಳು - ಲಿಪ್ಯಂತರಣ</item>
+    <item>తెలుగు - లిప్యంతరీకరణ</item>
+    <item>తెలుగు - ఇన్‍స్క్రిప్ట్</item>
+    <item>цӀаӀхна миз - Cyrillic Palochka</item>
+    <item>اردو - Urdu Transliteration</item>
+  </string-array>
+  <string-array name="transliterate_inputmethod_values">
+    <item>cyrl-palochka</item>
+    <item>mr-transliteration</item>
+    <item>mr-inscript</item>
+    <item>am-transliteration</item>
+    <item>as-transliteration</item>
+    <item>as-avro</item>
+    <item>as-bornona</item>
+    <item>as-inscript</item>
+    <item>cyrl-palochka</item>
+    <item>be-transliteration</item>
+    <item>be-latin</item>
+    <item>be-transliteration</item>
+    <item>be-latin</item>
+    <item>ber-tfng</item>
+    <item>bn-avro</item>
+    <item>bn-inscript</item>
+    <item>bn-nkb</item>
+    <item>bn-probhat</item>
+    <item>brx-inscript</item>
+    <item>cyrl-palochka</item>
+    <item>da-normforms</item>
+    <item>de</item>
+    <item>ipa-sil</item>
+    <item>eo-transliteration</item>
+    <item>fo-normforms</item>
+    <item>fi-transliteration</item>
+    <item>hi-transliteration</item>
+    <item>hi-inscript</item>
+    <item>gu-transliteration</item>
+    <item>gu-inscript</item>
+    <item>he-standard-2012-extonly</item>
+    <item>he-standard-2012</item>
+    <item>hi-transliteration</item>
+    <item>hi-inscript</item>
+    <item>hi-bolnagri</item>
+    <item>hi-transliteration</item>
+    <item>is-normforms</item>
+    <item>ipa-sil</item>
+    <item>jv-transliteration</item>
+    <item>ka-transliteration</item>
+    <item>cyrl-palochka</item>
+    <item>kn-transliteration</item>
+    <item>kn-inscript</item>
+    <item>kn-kgp</item>
+    <item>kok-inscript2</item>
+    <item>cyrl-palochka</item>
+    <item>cyrl-palochka</item>
+    <item>mai-inscript</item>
+    <item>ml-transliteration</item>
+    <item>ml-inscript</item>
+    <item>mn-cyrl</item>
+    <item>mr-transliteration</item>
+    <item>mr-inscript2</item>
+    <item>mr-inscript</item>
+    <item>ne-transliteration</item>
+    <item>ne-inscript2</item>
+    <item>ne-inscript</item>
+    <item>hi-transliteration</item>
+    <item>hi-inscript</item>
+    <item>no-normforms</item>
+    <item>no-tildeforms</item>
+    <item>no-normforms</item>
+    <item>no-tildeforms</item>
+    <item>no-normforms</item>
+    <item>no-tildeforms</item>
+    <item>or-transliteration</item>
+    <item>or-lekhani</item>
+    <item>or-inscript</item>
+    <item>pa-transliteration</item>
+    <item>pa-inscript</item>
+    <item>pa-phonetic</item>
+    <item>ber-tfng</item>
+    <item>ru-jcuken</item>
+    <item>sah-transliteration</item>
+    <item>sa-transliteration</item>
+    <item>sa-inscript2</item>
+    <item>sa-inscript</item>
+    <item>se-normforms</item>
+    <item>ber-tfng</item>
+    <item>si-singlish</item>
+    <item>si-wijesekara</item>
+    <item>sv-normforms</item>
+    <item>ta-transliteration</item>
+    <item>ta-99</item>
+    <item>ta-inscript</item>
+    <item>ta-bamini</item>
+    <item>kn-transliteration</item>
+    <item>te-transliteration</item>
+    <item>te-inscript</item>
+    <item>cyrl-palochka</item>
+    <item>ur-transliteration</item>
+  </string-array>
+</resources>
