@@ -462,9 +462,11 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
         InputMethod im;
         Log.d("MEMEME", mSettingsValues.mTransliterationMethodName + " Method");
         try {
-            if(!mSettingsValues.mTransliterationMethodName.equals("")) {
+            if(mSettingsValues.mTransliterationMethodName != null && !mSettingsValues.mTransliterationMethodName.isEmpty()) {
                 im = InputMethod.fromName(mSettingsValues.mTransliterationMethodName);
                 mWordComposer.setTransliterationMethod(im);
+            } else {
+                mWordComposer.setTransliterationMethod(null);
             }
         } catch (Exception e) {
             e.printStackTrace();
