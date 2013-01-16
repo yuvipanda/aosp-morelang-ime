@@ -1,34 +1,34 @@
--keep class com.android.inputmethod.latin.BinaryDictionary {
+-keep class BinaryDictionary {
   int mDictLength;
   <init>(...);
 }
 
--keep class com.android.inputmethod.latin.Flag {
+-keep class com.android.morelangs.latin.Flag {
   *;
 }
 
--keep class com.android.inputmethod.keyboard.ProximityInfo {
-  <init>(com.android.inputmethod.keyboard.ProximityInfo);
+-keep class ProximityInfo {
+  <init>(ProximityInfo);
 }
 
--keep class com.android.inputmethod.latin.Suggest {
+-keep class Suggest {
   <init>(...);
-  com.android.inputmethod.latin.SuggestedWords getSuggestions(...);
+  SuggestedWords getSuggestions(...);
 }
 
--keep class com.android.inputmethod.latin.AutoCorrection {
+-keep class AutoCorrection {
   java.lang.CharSequence getAutoCorrectionWord();
 }
 
--keep class com.android.inputmethod.latin.Utils {
+-keep class Utils {
   boolean equalsIgnoreCase(...);
 }
 
--keep class com.android.inputmethod.latin.spellcheck.SpellCheckerSettingsFragment {
+-keep class SpellCheckerSettingsFragment {
   *;
 }
 
--keep class com.android.inputmethod.keyboard.LatinKeyboardView {
+-keep class LatinKeyboardView {
   # Keep getter/setter methods for ObjectAnimator
   int getLanguageOnSpacebarAnimAlpha();
   void setLanguageOnSpacebarAnimAlpha(int);
@@ -36,21 +36,21 @@
   void setAltCodeKeyWhileTypingAnimAlpha(int);
 }
 
--keep class com.android.inputmethod.keyboard.MoreKeysKeyboard$Builder$MoreKeysKeyboardParams {
+-keep class MoreKeysKeyboard$Builder$MoreKeysKeyboardParams {
   <init>(...);
 }
 
--keep class com.android.inputmethod.latin.ResearchLogger {
+-keep class ResearchLogger {
   void setLogFileManager(...);
   void clearAll();
-  com.android.inputmethod.latin.ResearchLogger$LogFileManager getLogFileManager();
+  ResearchLogger$LogFileManager getLogFileManager();
 }
 
--keep class com.android.inputmethod.latin.ResearchLogger$LogFileManager {
+-keep class ResearchLogger$LogFileManager {
   java.lang.String getContents();
 }
 
--keep class com.android.inputmethod.keyboard.KeyboardLayoutSet$Builder {
+-keep class KeyboardLayoutSet$Builder {
   void setTouchPositionCorrectionEnabled(...);
 }
 
