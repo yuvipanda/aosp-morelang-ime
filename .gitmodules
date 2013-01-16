@@ -4,3 +4,6 @@
 [submodule "dictionaries"]
 	path = dictionaries
 	url = https://github.com/yuvipanda/aosp-morelang-ime-dictionaries
+[submodule "morelangs"]
+	path = morelangs
+	url = http://github.com/wikimedia/java-morelangs
