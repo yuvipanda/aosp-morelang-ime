@@ -186,6 +186,8 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
     private int mDeleteCount;
     private long mLastKeyTime;
 
+    private boolean mTransliterationOn;
+
     private AudioAndHapticFeedbackManager mFeedbackManager;
 
     // Member variables for remembering the current device orientation.
@@ -461,8 +463,10 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
             if(mSettingsValues.mTransliterationMethodName != null && !mSettingsValues.mTransliterationMethodName.isEmpty()) {
                 im = InputMethod.fromName(mSettingsValues.mTransliterationMethodName);
                 mWordComposer.setTransliterationMethod(im);
+                mTransliterationOn = true;
             } else {
                 mWordComposer.setTransliterationMethod(null);
+                mTransliterationOn = false;
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -1073,7 +1077,9 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
     }
 
     public int getCurrentAutoCapsState() {
-        if (!mSettingsValues.mAutoCap) return Constants.TextUtils.CAP_MODE_OFF;
+        if (!mSettingsValues.mAutoCap || mTransliterationOn) {
+            return Constants.TextUtils.CAP_MODE_OFF;
+        }
 
         final EditorInfo ei = getCurrentInputEditorInfo();
         if (ei == null) return Constants.TextUtils.CAP_MODE_OFF;
