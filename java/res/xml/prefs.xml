@@ -18,13 +18,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/english_ime_settings"
     android:key="english_ime_settings">
-    <ListPreference
-            android:key="input_transliteration_method"
-            android:title="Secondary Language"
-            android:persistent="true"
-            android:entryValues="@array/transliterate_inputmethod_values"
-            android:entries="@array/transliterate_inputmethod_names"
-            android:defaultValue=""/>
     <PreferenceCategory
         android:title="@string/general_category"
         android:key="general_settings">
