@@ -453,26 +453,25 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
                 DictionaryPackInstallBroadcastReceiver.NEW_DICTIONARY_INTENT_ACTION);
         registerReceiver(mDictionaryPackInstallReceiver, newDictFilter);
         
-        setupTransliteration();
     }
 
-    void setupTransliteration() {
+    void enableTransliteration(String transliterationMethod) {
         InputMethod im;
-        Log.d("MEMEME", mSettingsValues.mTransliterationMethodName + " Method");
         try {
-            if(mSettingsValues.mTransliterationMethodName != null && !mSettingsValues.mTransliterationMethodName.isEmpty()) {
-                im = InputMethod.fromName(mSettingsValues.mTransliterationMethodName);
-                mWordComposer.setTransliterationMethod(im);
-                mTransliterationOn = true;
-            } else {
-                mWordComposer.setTransliterationMethod(null);
-                mTransliterationOn = false;
-            }
+            im = InputMethod.fromName(transliterationMethod);
+            mWordComposer.setTransliterationMethod(im);
+            mTransliterationOn = true;
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
     }
+
+    void disableTransliteration() {
+        mWordComposer.setTransliterationMethod(null);
+        mTransliterationOn = false;
+    }
+
     // Has to be package-visible for unit tests
     /* package */ void loadSettings() {
         // Note that the calling sequence of onCreate() and onCurrentInputMethodSubtypeChanged()
@@ -735,7 +734,6 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
         loadSettings();
         updateCorrectionMode();
         updateSuggestionVisibility(mResources);
-        setupTransliteration();
 
         if (mSuggest != null && mSettingsValues.mAutoCorrectEnabled) {
             mSuggest.setAutoCorrectionThreshold(mSettingsValues.mAutoCorrectionThreshold);
@@ -2338,7 +2336,6 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
         initSuggest();
         updateCorrectionMode();
         loadSettings();
-        setupTransliteration();
         // Since we just changed languages, we should re-evaluate suggestions with whatever word
         // we are currently composing. If we are not composing anything, we may want to display
         // predictions or punctuation signs (which is done by updateBigramPredictions anyway).

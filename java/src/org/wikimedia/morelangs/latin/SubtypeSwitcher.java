@@ -31,8 +31,10 @@ import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.view.inputmethod.InputMethodSubtype;
 
+import org.wikimedia.morelangs.InputMethod;
 import org.wikimedia.morelangs.keyboard.KeyboardSwitcher;
 
+import java.lang.annotation.ElementType;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -195,6 +197,19 @@ public class SubtypeSwitcher {
         mCurrentSubtype = newSubtype;
         updateShortcutIME();
         mService.onRefreshKeyboard();
+
+        if(getCurrentSubtype().containsExtraValueKey(Constants.Subtype.ExtraValue.TRANSLITERATION_METHOD)) {
+            InputMethod im;
+            try {
+                String transliterationName = getCurrentSubtype().getExtraValueOf(Constants.Subtype.ExtraValue.TRANSLITERATION_METHOD);
+                mService.enableTransliteration(transliterationName);
+            } catch (Exception e) {
+                e.printStackTrace();
+                throw new RuntimeException(e);
+            }
+        } else {
+            mService.disableTransliteration();
+        }
     }
 
     ////////////////////////////
