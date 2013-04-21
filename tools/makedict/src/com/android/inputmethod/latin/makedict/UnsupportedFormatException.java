@@ -16,32 +16,11 @@
 
 package com.android.inputmethod.latin.makedict;
 
-//import android.util.Log;
-
 /**
- * Wrapper to redirect log events to the right output medium.
+ * Simple exception thrown when a file format is not recognized.
  */
-public class MakedictLog {
-    public static final boolean DBG = false;
-    private static final String TAG = MakedictLog.class.getSimpleName();
-
-    public static void d(String message) {
-        if (DBG) {
-            //Log.d(TAG, message);
-        }
-    }
-
-    public static void i(String message) {
-        if (DBG) {
-            //Log.i(TAG, message);
-        }
-    }
-
-    public static void w(String message) {
-       // Log.w(TAG, message);
-    }
-
-    public static void e(String message) {
-        //Log.e(TAG, message);
+public class UnsupportedFormatException extends Exception {
+    public UnsupportedFormatException(String description) {
+        super(description);
     }
 }
