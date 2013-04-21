@@ -347,7 +347,14 @@ public class Suggest implements Dictionary.WordCallback {
 
         final ArrayList<SuggestedWords.SuggestedWordInfo> suggestionsList;
         if (DBG) {
-            suggestionsList = getSuggestionsInfoListWithDebugInfo(typedWord, mSuggestions);
+            mSuggestions = getSuggestionsInfoListWithDebugInfo(typedWord, mSuggestions);
+        }
+
+        if(wordComposer.getTransliterationMethod() != null) {
+            suggestionsList = new ArrayList<SuggestedWords.SuggestedWordInfo>();
+            for(SuggestedWords.SuggestedWordInfo sw : mSuggestions) {
+                suggestionsList.add(new SuggestedWords.SuggestedWordInfo(wordComposer.getTransliterationMethod().transliterateAll(sw.mWord.toString(), null), SuggestedWords.SuggestedWordInfo.MAX_SCORE));
+            }
         } else {
             suggestionsList = mSuggestions;
         }

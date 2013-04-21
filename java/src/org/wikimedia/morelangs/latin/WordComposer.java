@@ -157,6 +157,10 @@ public class WordComposer {
         add(primaryCode, keyX, keyY);
     }
 
+    public InputMethod getTransliterationMethod() {
+        return mTransliterationMethod;
+    }
+
     private String context = "";
     static int firstDivergence(String str1, String str2) {
         int length = str1.length() > str2.length() ? str2.length() : str1.length();
